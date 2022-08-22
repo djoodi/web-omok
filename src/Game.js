@@ -228,7 +228,8 @@ function IsDraw(cells) {
     return cells.filter(c => c === null).length === 0;
 }
 
-export const TicTacToe = {
+export const Omok = {
+    name: 'Omok',
     setup: () => ({ cells: Array(225).fill(null) }),
 
     turn: {
@@ -241,10 +242,12 @@ export const TicTacToe = {
             if (G.cells[id] !== null) {
                 return INVALID_MOVE;
             }
-            console.log(id);
             G.cells[id] = ctx.currentPlayer;
         }
     },
+
+    minPlayers: 2,
+    maxPlayers: 2,
 
     endIf: (G, ctx) => {
         if (IsVictory(G.cells, ctx.currentPlayer)) {
