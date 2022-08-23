@@ -5,9 +5,7 @@ import serve from 'koa-static';
 
 const server = Server({
   games: [Omok],
-  origins: [Origins.LOCALHOST_IN_DEVELOPMENT,
-    'https://web-omok.herokuapp.com/',
-    'localhost']
+  origins: ['https://web-omok.herokuapp.com/']
 });
 
 const PORT = process.env.PORT || 8000;
