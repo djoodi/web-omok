@@ -12,8 +12,8 @@ import { OmokBoard } from './Board';
 //   //multiplayer: SocketIO({server: 'localhost:8000'}),
 // });
 
-const {protocol, hostname, port} = window.location;
-const server = `${protocol}//${hostname}:${port}`;
+//const {protocol, hostname, port} = window.location;
+const server = `https://web-omok.herokuapp.com`;
 console.log(server);
 const importedGames = [{game: Omok, board: OmokBoard}];
 
