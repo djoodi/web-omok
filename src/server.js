@@ -5,12 +5,22 @@ import serve from 'koa-static';
 
 const server = Server({
   games: [Omok],
-  origins: ['https://web-omok.herokuapp.com/', Origins.LOCALHOST_IN_DEVELOPMENT]
+  origins: [Origins.LOCALHOST]
 });
 
-const PORT = process.env.PORT || 8000;
+server.run(8000);
 
-//const frontEndAppBuildPath = path.resolve(__dirname, './build');
-//server.app.use(serve(frontEndAppBuildPath))
+// const PORT = process.env.PORT || 8000;
 
-server.run(PORT, () => console.log('server running ' + PORT));
+// const frontEndAppBuildPath = path.resolve(__dirname, './build');
+// server.app.use(serve(frontEndAppBuildPath))
+
+// server.run(PORT, () => {
+//   console.log("running server on " + PORT);
+//   server.app.use(
+//     async (ctx, next) => await serve(frontEndAppBuildPath)(
+//       Object.assign(ctx, { path: 'index.html' }),
+//       next()
+//     )
+//   );
+// });
