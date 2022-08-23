@@ -15,4 +15,4 @@ const PORT = process.env.PORT || 8000;
 const frontEndAppBuildPath = path.resolve(__dirname, './build');
 server.app.use(serve(frontEndAppBuildPath))
 
-server.run(PORT);
+server.run(PORT, () => console.log('server running ' + PORT));
