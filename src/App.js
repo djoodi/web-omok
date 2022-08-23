@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lobby } from 'boardgame.io/react';
-import { OmokBoard } from './board';
-import { Omok } from './game';
+import { OmokBoard } from './Board';
+import { Omok } from './Game';
 
 const { protocol, hostname, port } = window.location;
 const server = `${protocol}//${hostname}:${port}`;
